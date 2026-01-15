@@ -1,2 +1,7 @@
 title: Robert Jagiello
 theme: jekyll-theme-minimal
+
+header_pages:
+- index.md
+- research.md
+- cv.md
