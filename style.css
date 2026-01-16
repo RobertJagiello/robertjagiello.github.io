@@ -80,12 +80,15 @@ h2 {
   justify-content: center;
   gap: 1em;
   margin-top: 0.75em;
+  color: #444;
+  text-decoration: none;
 }
 
 .icon-links svg {
   fill: currentColor;
+  transition: color 0.2s ease;
 }
 
 .icon-links a:hover {
-  opacity: 0.7;
+  color: #000;
 }
