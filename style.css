@@ -38,9 +38,15 @@ body {
   align-items: flex-start;
 }
 
+.photo-block {
+  text-align: center;
+}
+
 .about img {
-  width: 180px;
+  width: 220px;   /* increased size */
   border-radius: 4px;
+  display: block;
+  margin: 0 auto;
 }
 
 .bio p {
@@ -70,7 +76,10 @@ h2 {
 }
 
 .icon-links a {
-  color: #111;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 0.75em;
 }
 
 .icon-links svg {
