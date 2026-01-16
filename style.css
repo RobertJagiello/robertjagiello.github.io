@@ -133,27 +133,36 @@ section p a:hover {
     padding: 0 1em;
   }
 
-  /* Stack bio and photo vertically */
+  /* Stack content vertically */
   .about {
     flex-direction: column;
     align-items: center;
   }
 
-  /* Center bio text on mobile */
-  .bio {
-    text-align: left;
-    width: 100%;
-  }
-
-  /* Resize photo for mobile */
-  .about img {
-    width: 180px;
+  /* Reorder elements:
+     name -> photo -> icons -> bio */
+  .photo-block {
+    order: 1;
     margin-top: 1em;
+    margin-bottom: 1em;
   }
 
-  /* Center icons under photo */
+  .bio {
+    order: 2;
+    width: 100%;
+    text-align: left;
+  }
+
+  /* Slightly larger photo on mobile */
+  .about img {
+    width: 210px;   /* increased from desktop-mobile */
+    margin-top: 0;
+  }
+
+  /* Keep icons centered under photo */
   .icon-links {
-    margin-bottom: 1em;
+    margin-top: 0.75em;
+    margin-bottom: 0;
   }
 
   /* Navigation readability */
@@ -171,4 +180,5 @@ section p a:hover {
     margin-top: 2em;
   }
 }
+
 
