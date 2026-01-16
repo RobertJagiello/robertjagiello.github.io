@@ -8,9 +8,12 @@ body {
 }
 
 /* Navigation */
-.nav {
-  padding: 1em 2em;
-  border-bottom: 1px solid #ddd;
+.nav-inner {
+  max-width: 1000px;        /* same as .container */
+  margin: 0 auto;
+  padding: 1em 1.25em;      /* same horizontal padding as .container */
+  display: flex;
+  justify-content: flex-end;
 }
 
 .nav a {
