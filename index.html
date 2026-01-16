@@ -7,6 +7,7 @@
 
   <link rel="stylesheet" href="style.css">
 </head>
+
   
 <body>
 
@@ -66,20 +67,99 @@ I am equally interested in supernatural and conspiratorial belief systems, the s
 
 </section>
 
-    <section id="research">
-      <h2>Research</h2>
+   <section id="research">
+  <h2>Working Papers</h2>
 
+  <div class="paper">
+
+    <h3 class="paper-title">
+      Title of Working Paper
+    </h3>
+
+    <p class="paper-authors">
+      Robert Jagiello,
+      <a href="https://example.com/coauthor" target="_blank" rel="noopener noreferrer">
+        Coauthor Name
+      </a>
+    </p>
+
+    <p class="paper-journal">
+      Manuscript in preparation
+    </p>
+
+    <div class="paper-buttons">
+      <button onclick="toggleBox('wp1-abstract')">Abstract</button>
+      <button onclick="toggleBox('wp1-figures')">Figures</button>
+      <a href="papers/wp1_AAM.pdf" target="_blank" rel="noopener noreferrer">
+        PDF
+      </a>
+    </div>
+
+    <div id="wp1-abstract" class="paper-box">
       <p>
-        Short paragraph
+        Paste the abstract text here. This is safe to display and
+        completely standard.
       </p>
+    </div>
 
-      <ul>
-        <li><strong>Paper title</strong>, with coauthors (year)</li>
-        <li><strong>Paper title</strong>, with coauthors (year)</li>
-      </ul>
-    </section>
+    <div id="wp1-figures" class="paper-box">
+      <img src="figures/wp1_fig1.png" alt="Figure 1">
+      <p class="figure-caption">
+        Figure 1. Short explanatory caption.
+      </p>
+    </div>
 
   </div>
 
+  <h2>Publications</h2>
+
+  <div class="paper">
+
+    <h3 class="paper-title">
+      Title of Published Paper
+    </h3>
+
+    <p class="paper-authors">
+      Robert Jagiello,
+      <a href="https://example.com/coauthor" target="_blank" rel="noopener noreferrer">
+        Coauthor Name
+      </a>
+    </p>
+
+    <p class="paper-journal">
+      <em>Journal Name</em> (Year)
+    </p>
+
+    <div class="paper-buttons">
+      <button onclick="toggleBox('pub1-abstract')">Abstract</button>
+      <button onclick="toggleBox('pub1-figures')">Figures</button>
+      <a href="papers/pub1_AAM.pdf" target="_blank" rel="noopener noreferrer">
+        PDF
+      </a>
+    </div>
+
+    <div id="pub1-abstract" class="paper-box">
+      <p>
+        Abstract text goes here.
+      </p>
+    </div>
+
+    <div id="pub1-figures" class="paper-box">
+      <img src="figures/pub1_fig1.png" alt="Figure 1">
+    </div>
+
+  </div>
+</section>
+
+
+  </div>
+
+<script>
+  function toggleBox(id) {
+    const box = document.getElementById(id);
+    box.style.display = box.style.display === "block" ? "none" : "block";
+  }
+</script>
+  
 </body>
 </html>
