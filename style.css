@@ -69,26 +69,19 @@ h2 {
   margin-bottom: 0.5em;
 }
 
-.icon-links {
-  display: flex;
-  gap: 1em;
-  margin-top: 1em;
-}
-
 .icon-links a {
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-  margin-top: 0.75em;
-  color: #444;
+  color: #444 !important;
   text-decoration: none;
 }
 
-.icon-links svg {
-  fill: currentColor;
-  transition: color 0.2s ease;
+.icon-links a:visited {
+  color: #444 !important;
 }
 
 .icon-links a:hover {
-  color: #000;
+  color: #000 !important;
+}
+
+.icon-links svg path {
+  fill: currentColor !important;
 }
