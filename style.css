@@ -1,10 +1,13 @@
+/* Global reset */
 body {
-  font-family: "CMU Serif", "Times New Roman", serif;
-  line-height: 1.6;
   margin: 0;
+  font-family: Calibri, "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
   color: #111;
+  background-color: #f5f6f4;   /* very light grey */
 }
 
+/* Navigation */
 .nav {
   padding: 1em 2em;
   border-bottom: 1px solid #ddd;
@@ -12,77 +15,89 @@ body {
 
 .nav a {
   margin-right: 1.5em;
+  color: #1b4d3e;             /* dark green */
   text-decoration: none;
-  color: #111;
 }
 
 .nav a:hover {
-  text-decoration: underline;
+  opacity: 0.8;
 }
 
+/* Page container */
 .container {
   max-width: 900px;
   margin: 3em auto;
   padding: 0 2em;
 }
 
+/* Name */
 .name {
   text-align: center;
   font-weight: normal;
+  color: #1b4d3e;             /* dark green */
   margin-bottom: 2em;
 }
 
+/* About section layout */
 .about {
   display: flex;
   gap: 2.5em;
   align-items: flex-start;
+  justify-content: space-between;
 }
 
+.bio {
+  flex: 1;
+}
+
+/* Photo + icons */
 .photo-block {
   text-align: center;
 }
 
 .about img {
-  width: 220px;   /* increased size */
+  width: 180px;
+  max-width: 100%;
   border-radius: 4px;
   display: block;
   margin: 0 auto;
 }
 
-.bio p {
-  margin-top: 0;
+/* Icon links */
+.icon-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.75em;
+  margin-top: 0.75em;
 }
 
-.links a {
+.icon-links a {
+  font-size: 1.4em;
+  color: #1b4d3e;             /* dark green */
   text-decoration: none;
 }
 
-.links a:hover {
-  text-decoration: underline;
+.icon-links a:hover {
+  opacity: 0.75;
 }
 
+/* Sections */
 section {
   margin-top: 3em;
 }
 
 h2 {
   margin-bottom: 0.5em;
+  font-weight: normal;
+  color: #1b4d3e;
 }
 
-/* Academic icon styling */
-.icon-links a {
-  color: #555;
-  font-size: 1.4em;     /* icon size */
+/* Links in text */
+a {
+  color: #1b4d3e;
   text-decoration: none;
 }
 
-.icon-links a:hover {
-  color: #000;
-}
-
-.icon-links {
-  display: flex;
-  justify-content: center;
-  gap: 0.75em;
-  margin-top: 0.75em;
+a:hover {
+  opacity: 0.8;
 }
