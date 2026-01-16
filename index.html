@@ -157,12 +157,13 @@ I am equally interested in supernatural and conspiratorial belief systems, the s
 <script>
   function toggleBox(id) {
     const boxes = document.querySelectorAll('.paper-box');
+    const target = document.getElementById(id);
 
     boxes.forEach(box => {
-      if (box.id === id) {
-        box.style.display = box.style.display === 'block' ? 'none' : 'block';
+      if (box === target) {
+        box.classList.toggle('open');
       } else {
-        box.style.display = 'none';
+        box.classList.remove('open');
       }
     });
   }
@@ -170,10 +171,11 @@ I am equally interested in supernatural and conspiratorial belief systems, the s
   // Ensure all boxes are closed on page load
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.paper-box').forEach(box => {
-      box.style.display = 'none';
+      box.classList.remove('open');
     });
   });
 </script>
+
 
   
 </body>
