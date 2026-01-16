@@ -236,6 +236,10 @@ section p a:hover {
   margin-top: 0.5em;
 }
 
+.paper-box.open {
+  display: block;
+}
+
 .paper-box img {
   max-width: 100%;
 }
