@@ -94,7 +94,7 @@ h2 {
 
 /* Links in text */
 a {
-  color: #3a7f6a;
+  color: #1b4d3e;
   text-decoration: none;
 }
 
@@ -102,3 +102,13 @@ a:hover {
   opacity: 0.8;
 }
 
+/* In-text links: lighter green for emphasis */
+.bio a,
+section p a {
+  color: #3a7f6a;   /* lighter green */
+}
+
+.bio a:hover,
+section p a:hover {
+  opacity: 0.85;
+}
