@@ -181,4 +181,67 @@ section p a:hover {
   }
 }
 
+/* Research section */
+
+.paper {
+  margin-bottom: 3em;
+}
+
+.paper-title {
+  font-weight: normal;
+  margin-bottom: 0.3em;
+}
+
+.paper-authors {
+  margin: 0;
+}
+
+.paper-journal {
+  margin: 0.25em 0 0.75em 0;
+  font-style: italic;
+  color: #555;
+}
+
+/* Buttons */
+
+.paper-buttons {
+  display: flex;
+  gap: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+.paper-buttons button,
+.paper-buttons a {
+  font-family: inherit;
+  font-size: 0.9em;
+  padding: 0.25em 0.6em;
+  border: 1px solid #ccc;
+  background: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: #1b4d3e;
+}
+
+.paper-buttons button:hover,
+.paper-buttons a:hover {
+  background-color: #eef2ef;
+}
+
+/* Toggle boxes */
+
+.paper-box {
+  display: none;
+  padding: 0.75em;
+  border-left: 3px solid #ddd;
+  margin-top: 0.5em;
+}
+
+.paper-box img {
+  max-width: 100%;
+}
+
+.figure-caption {
+  font-size: 0.9em;
+  color: #555;
+}
 
