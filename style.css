@@ -69,19 +69,20 @@ h2 {
   margin-bottom: 0.5em;
 }
 
+/* Academic icon styling */
 .icon-links a {
-  color: #444 !important;
+  color: #555;
+  font-size: 1.4em;     /* icon size */
   text-decoration: none;
 }
 
-.icon-links a:visited {
-  color: #444 !important;
-}
-
 .icon-links a:hover {
-  color: #000 !important;
+  color: #000;
 }
 
-.icon-links svg path {
-  fill: currentColor !important;
+.icon-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.75em;
+  margin-top: 0.75em;
 }
