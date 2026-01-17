@@ -348,6 +348,27 @@ Upper branches show chains that were periodically re-exposed to the original inf
 </section>
     
   </div>
+<script>
+function toggleBox(id) {
+    const boxes = document.querySelectorAll('.paper-box');
+    const target = document.getElementById(id);
 
+    boxes.forEach(box => {
+      if (box === target) {
+        box.classList.toggle('open');
+      } else {
+        box.classList.remove('open');
+      }
+    });
+  }
+
+  // Ensure all boxes are closed on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.paper-box').forEach(box => {
+      box.classList.remove('open');
+    });
+  });
+</script>
+  
 </body>
 </html>
