@@ -101,6 +101,11 @@ section {
   margin-top: 3em;
 }
 
+/* Homepage: remove extra space above name */
+#index section#about {
+  margin-top: 0;
+}
+
 h2 {
   margin-bottom: 0.5em;
   font-weight: normal;
