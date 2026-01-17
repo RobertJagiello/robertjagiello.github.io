@@ -40,6 +40,11 @@ body {
   opacity: 0.8;
 }
 
+/* Current page in navigation */
+.nav a.current {
+  font-weight: bold;
+}
+
 /* Page container */
 .container {
   max-width: 1000px;
