@@ -377,6 +377,20 @@ section p a:hover {
   margin-bottom: 0;
 }
 
+/* Allow expanded boxes to use more horizontal space */
+#research .paper-box.open {
+  max-width: 1000px;          /* match outer container */
+  margin-left: calc(-140px);  /* (1000 - 720) / 2 */
+  margin-right: calc(-140px);
+}
+
+@media (max-width: 1200px) {
+  #research .paper-box.open {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 
 
 
