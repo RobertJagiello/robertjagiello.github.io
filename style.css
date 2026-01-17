@@ -397,4 +397,34 @@ section p a:hover {
 }
 
 
+.page-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1em 1.25em;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 3em;
+}
+
+/* Sticky left column */
+.sidebar {
+  position: sticky;
+  top: 6em; /* below sticky nav */
+  align-self: start;
+  text-align: center;
+}
+
+.sidebar img {
+  width: 200px;
+  border-radius: 4px;
+  margin-bottom: 0.75em;
+}
+
+/* Main content */
+.content {
+  max-width: 720px;
+}
+
+
+
 
