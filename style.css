@@ -106,10 +106,21 @@ section {
   margin-top: 0;
 }
 
+/* Research page: disable section spacing */
+#research section {
+  margin-top: 0;
+}
+
 h2 {
   margin-bottom: 0.5em;
   font-weight: normal;
   color: #1b4d3e;
+}
+
+/* Research page heading rhythm */
+#research h2 {
+  margin-top: 3em;
+  margin-bottom: 1em;
 }
 
 /* Links in text */
