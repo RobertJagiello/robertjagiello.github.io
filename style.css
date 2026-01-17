@@ -257,7 +257,7 @@ section p a:hover {
   padding: 0.75em;
   border-left: 3px solid #ddd;
   margin-top: 0.5em;
-  scroll-margin-top: 6em;
+  scroll-margin-top: 6.6em;
   transition: opacity 0.7s ease;
 }
 
@@ -288,6 +288,7 @@ section p a:hover {
 .figure-row img {
   max-width: 100%;
   height: auto;
+  margin: 0;
 }
 
 .figure-caption {
@@ -363,7 +364,18 @@ section p a:hover {
 #research .research-content {
   max-width: 720px;      /* controls column width */
   margin: 0 auto;        /* centers it */
+  padding-top: 0.5em;
 }
+
+/* Restore paragraph spacing inside figure captions */
+#research .figure-caption p {
+  margin-bottom: 0.8em;
+}
+
+#research .figure-caption p:last-child {
+  margin-bottom: 0;
+}
+
 
 
 
