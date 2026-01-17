@@ -7,6 +7,19 @@ body {
   background-color: #f5f6f4;   /* very light grey */
 }
 
+/* Sticky navigation */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #f5f6f4; /* same as page background */
+  border-bottom: 1px solid #e0e0e0; /* optional but recommended */
+}
+
+.nav + .container {
+  padding-top: 0.5em;
+}
+
 /* Navigation */
 .nav-inner {
   max-width: 1000px;        /* same as .container */
