@@ -350,17 +350,26 @@ Upper branches show chains that were periodically re-exposed to the original inf
   </div>
 <script>
 function toggleBox(id) {
-    const boxes = document.querySelectorAll('.paper-box');
-    const target = document.getElementById(id);
+  const boxes = document.querySelectorAll('.paper-box');
+  const target = document.getElementById(id);
+  const isOpening = !target.classList.contains('open');
 
-    boxes.forEach(box => {
-      if (box === target) {
-        box.classList.toggle('open');
-      } else {
-        box.classList.remove('open');
-      }
-    });
+  boxes.forEach(box => {
+    box.classList.remove('open');
+  });
+
+  if (isOpening) {
+    target.classList.add('open');
+
+    // Smooth scroll to keep content in view
+    setTimeout(() => {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }, 50);
   }
+}
 
   // Ensure all boxes are closed on page load
   document.addEventListener('DOMContentLoaded', () => {
