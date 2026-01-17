@@ -241,7 +241,10 @@ section p a:hover {
 }
 
 .paper-box img {
-  max-width: 100%;
+  max-width: 85%;        /* reduce visual dominance */
+  height: auto;
+  display: block;
+  margin: 0.75em auto;   /* center with breathing room */
 }
 
 .figure-caption {
