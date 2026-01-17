@@ -55,10 +55,14 @@ I am equally interested in supernatural and conspiratorial belief systems, the s
     ⓘ
   </a>
 
-  <a href="mailto:your.email@university.edu"
-     aria-label="Email">
-    ✉
-  </a>
+ <a href="#"
+   class="email-link"
+   aria-label="Email"
+   data-user="r.d.jagiello"
+   data-domain="gmail.com">
+  ✉
+</a>
+
 </div>
 
     </div>
@@ -414,6 +418,19 @@ Upper branches show chains that were periodically re-exposed to the original inf
       box.classList.remove('open');
     });
   });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const emailLink = document.querySelector('.email-link');
+    if (emailLink) {
+      emailLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        const user = emailLink.dataset.user;
+        const domain = emailLink.dataset.domain;
+        window.location.href = `mailto:${user}@${domain}`;
+      });
+    }
+  });
+  
 </script>
 
 
