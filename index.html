@@ -82,11 +82,150 @@
 
       <!-- Research -->
       <section id="research">
-        <h2>Research</h2>
+  <h2>Research</h2>
 
-        <!-- ⬇️ KEEP ALL YOUR EXISTING .paper MARKUP HERE ⬇️ -->
-        <!-- Paste the entire contents of <div class="research-content"> … </div> here -->
-      </section>
+  <h2>Working Papers</h2>
+
+  <div class="paper">
+    <h3 class="paper-title">
+      Magic and ritual as affiliative strategies in response to ostracism threat
+    </h3>
+
+    <p class="paper-authors">
+      Robert Jagiello &
+      <a href="https://www.harveywhitehouse.com/" target="_blank" rel="noopener noreferrer">
+        Harvey Whitehouse
+      </a>
+    </p>
+
+    <p class="paper-journal">
+      Submitted and in review
+    </p>
+
+    <div class="paper-buttons">
+      <button onclick="toggleBox('wp1-abstract')">Abstract</button>
+    </div>
+
+    <div id="wp1-abstract" class="paper-box">
+      <p>
+        The transmission of rituals and magical practices is a fundamental feature of human culture, yet the psychological mechanisms underpinning their persistence remain contested. The Bifocal Stance Theory (BST) posits that individuals adopt either a ritual stance, which prioritizes social affiliation and norm adherence, or an instrumental stance, which emphasizes efficiency in achieving goal-directed outcomes. Using an online adaptation of the pen-and-cups paradigm, we show that ostracized individuals copy causally opaque actions with higher fidelity, supporting the view that ritualized and magical actions serve affiliative rather than instrumental functions.
+      </p>
+    </div>
+  </div>
+
+  <div class="paper">
+    <h3 class="paper-title">
+      Ostracism and the Spread of Natural and Supernatural Concepts
+    </h3>
+
+    <p class="paper-authors">
+      Robert Jagiello &
+      <a href="https://www.harveywhitehouse.com/" target="_blank" rel="noopener noreferrer">
+        Harvey Whitehouse
+      </a>
+    </p>
+
+    <p class="paper-journal">
+      Submitted and in review
+    </p>
+
+    <div class="paper-buttons">
+      <button onclick="toggleBox('wp2-abstract')">Abstract</button>
+    </div>
+
+    <div id="wp2-abstract" class="paper-box">
+      <p>
+        We present experimental evidence that supernatural concepts are more readily interpreted through a ritual stance than an instrumental stance when learned in social contexts, particularly under conditions of social exclusion. These findings have implications for the evolutionary origins of religion.
+      </p>
+    </div>
+  </div>
+
+  <h2>Publications</h2>
+
+  <div class="paper">
+    <h3 class="paper-title">
+      Tradition and invention: The bifocal stance theory of cultural evolution
+    </h3>
+
+    <p class="paper-authors">
+      Robert Jagiello,
+      <a href="https://www.asc.ox.ac.uk/person/professor-cecilia-heyes" target="_blank" rel="noopener noreferrer">
+        Cecilia Heyes
+      </a>, &
+      <a href="https://www.harveywhitehouse.com/" target="_blank" rel="noopener noreferrer">
+        Harvey Whitehouse
+      </a>
+    </p>
+
+    <p class="paper-journal">
+      <em>Behavioral and Brain Sciences</em> (2022)
+    </p>
+
+    <div class="paper-buttons">
+      <button onclick="toggleBox('pub1-abstract')">Abstract</button>
+      <button onclick="toggleBox('pub1-figures')">Figures</button>
+      <a href="BST-main.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+    </div>
+
+    <div id="pub1-abstract" class="paper-box">
+      <p>
+        The bifocal stance theory explains how innovation and tradition coexist in cultural evolution by allowing learners to flexibly adopt instrumental or ritual motivations during social learning.
+      </p>
+    </div>
+
+    <div id="pub1-figures" class="paper-box">
+      <div class="figure-row">
+        <img src="figures/BST-overview.jpg" alt="BST overview">
+        <div class="figure-caption">
+          <p><strong>The Bifocal Stance Theory of Cultural Evolution.</strong></p>
+          <p>
+            Social learners interpret actions either instrumentally or ritually depending on contextual cues, leading to innovation or faithful transmission.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="paper">
+    <h3 class="paper-title">
+      Rapid Brain Responses to Familiar vs. Unfamiliar Music
+    </h3>
+
+    <p class="paper-authors">
+      Robert Jagiello et al.
+    </p>
+
+    <p class="paper-journal">
+      <em>Scientific Reports</em> (2019)
+    </p>
+
+    <div class="paper-buttons">
+      <button onclick="toggleBox('pub3-abstract')">Abstract</button>
+      <button onclick="toggleBox('pub3-figures')">Figures</button>
+      <a href="pupil-eeg.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+    </div>
+
+    <div id="pub3-abstract" class="paper-box">
+      <p>
+        EEG and pupillometry reveal rapid neural differentiation between familiar and unfamiliar music, indicating that familiarity effects reflect higher-level cognitive processing.
+      </p>
+    </div>
+
+    <div id="pub3-figures" class="paper-box">
+      <div class="figure-row">
+        <img src="figures/eegFig1.png" alt="EEG results">
+        <div class="figure-caption">
+          <p><strong>Brain responses to musical familiarity.</strong></p>
+          <p>
+            Familiar music elicits distinct late neural responses in parietal and frontotemporal regions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
 
       <!-- Teaching -->
       <section id="teaching">
@@ -117,6 +256,32 @@
 
   <!-- Email obfuscation -->
   <script>
+function toggleBox(id) {
+  const boxes = document.querySelectorAll('.paper-box');
+  const target = document.getElementById(id);
+  const isOpening = !target.classList.contains('open');
+
+  boxes.forEach(box => {
+    box.classList.remove('open');
+  });
+
+  if (isOpening) {
+    target.classList.add('open');
+    setTimeout(() => {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }, 50);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.paper-box').forEach(box => {
+    box.classList.remove('open');
+  });
+});
+    
     document.addEventListener('DOMContentLoaded', () => {
       const link = document.querySelector('.email-link');
       link.addEventListener('click', e => {
