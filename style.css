@@ -252,3 +252,32 @@ section p a:hover {
   color: #555;
 }
 
+/* Side-by-side figure + caption */
+.figure-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1.25em;
+  align-items: start;
+}
+
+.figure-row img {
+  max-width: 100%;
+  height: auto;
+}
+
+.figure-caption {
+  font-size: 0.95em;
+  color: #333;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .figure-row {
+    grid-template-columns: 1fr;
+  }
+
+  .figure-caption {
+    margin-top: 0.75em;
+  }
+}
+
