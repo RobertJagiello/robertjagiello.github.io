@@ -106,21 +106,10 @@ section {
   margin-top: 0;
 }
 
-/* Research page: disable section spacing */
-#research section {
-  margin-top: 0;
-}
-
 h2 {
   margin-bottom: 0.5em;
   font-weight: normal;
   color: #1b4d3e;
-}
-
-/* Research page heading rhythm */
-#research h2 {
-  margin-top: 3em;
-  margin-bottom: 1em;
 }
 
 /* Links in text */
@@ -202,10 +191,6 @@ section p a:hover {
 }
 
 /* Research section */
-
-.paper {
-  margin-bottom: 2.2em;
-}
 
 .paper-title {
   font-weight: normal;
@@ -325,6 +310,33 @@ section p a:hover {
 
 .icon-links a:hover::after {
   opacity: 1;
+}
+
+/* =========================
+   Research page spacing reset
+   ========================= */
+
+#research h1,
+#research h2,
+#research p,
+#research ul,
+#research li {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Tight spacing between papers */
+#research .paper {
+  margin-top: 1.2em;
+}
+
+/* Looser spacing before section headings */
+#research h2 {
+  margin-top: 2.2em;
+}
+/* First subsection should be tight under Research title */
+#research h2:first-of-type {
+  margin-top: 1.2em;
 }
 
 
