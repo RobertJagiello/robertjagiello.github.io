@@ -359,4 +359,11 @@ section p a:hover {
   margin-top: 1.1em;
 }
 
+/* Centered research column */
+#research .research-content {
+  max-width: 720px;      /* controls column width */
+  margin: 0 auto;        /* centers it */
+}
+
+
 
