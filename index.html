@@ -7,91 +7,125 @@
 
   <link rel="stylesheet" href="style.css">
 </head>
- 
+
 <body id="index">
-  
+
+  <!-- Sticky top navigation -->
   <nav class="nav">
-  <div class="nav-inner">
-    <a href="#about" class="current">About</a>
-    <a href="research.html">Research</a>
-    <a href="cv.html">CV</a>
-  </div>
-</nav>
-
-  <div class="container">
-
-    <section id="about">
-
-  <h1 class="name">Robert Jagiello</h1>
-
-  <div class="about">
-
-    <div class="bio">
-      <p>
-        I am a researcher in social psychology and evolutionary anthropology interested in the motivations that guide belief formation, social learning and cultural transmission. I completed my PhD at the University of Oxford under the supervision of <a href="https://www.harveywhitehouse.com/" target="_blank" rel="noopener noreferrer">Prof Harvey Whitehouse</a>, based at the <a href="https://www.cssc.ox.ac.uk/" target="_blank" rel="noopener noreferrer">Centre for the Study of Social Cohesion (CSSC)</a>. My doctoral research examined why some cultural practices and beliefs (such as rituals, conventions, norms and traditions) are transmitted with high fidelity and resist change, while others remain flexible and open to innovation.
-      </p>
- <p>
-I am equally interested in supernatural and conspiratorial belief systems, the social cognition underlying moral norms and the evolution of morality as a cooperative device. Across these domains, my work asks how beliefs that are weakly supported by direct evidence can nonetheless become socially compelling, morally charged and resistant to correction.
- </p>
-      <p>
-        My work integrates experimental psychology, cultural evolutionary theory and computational approaches, with earlier training in cognitive neuroscience using EEG and pupillometry.
-      </p>
+    <div class="nav-inner">
+      <a href="#about" class="current">About</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#impact">Public Impact</a>
+      <a href="#cv">CV</a>
     </div>
+  </nav>
 
-    <div class="photo-block">
-      <img src="photo.jpg" alt="Your photo">
+  <!-- Page layout -->
+  <div class="page-layout">
+
+    <!-- Sticky left column -->
+    <aside class="sidebar">
+      <img src="photo.jpg" alt="Robert Jagiello">
 
       <div class="icon-links">
-  <a href="https://scholar.google.co.uk/citations?user=t0n_-iUAAAAJ&hl=en&oi=ao"
-     target="_blank" rel="noopener noreferrer"
-     aria-label="Google Scholar"
-    data-tooltip="Google Scholar">
-    🎓
-  </a>
+        <a href="https://scholar.google.co.uk/citations?user=t0n_-iUAAAAJ&hl=en&oi=ao"
+           target="_blank" rel="noopener noreferrer"
+           data-tooltip="Google Scholar">🎓</a>
 
-  <a href="https://orcid.org/0000-0003-0748-7870"
-     target="_blank" rel="noopener noreferrer"
-     aria-label="ORCID"
-    data-tooltip="ORCID">
-    ⓘ
-  </a>
+        <a href="https://orcid.org/0000-0003-0748-7870"
+           target="_blank" rel="noopener noreferrer"
+           data-tooltip="ORCID">ⓘ</a>
 
- <a href="#"
-   class="email-link"
-   aria-label="Email"
-   data-user="r.d.jagiello"
-   data-domain="gmail.com"
-   data-tooltip="r.d.jagiello@gmail.com">
-  ✉
-</a>
+        <a href="#"
+           class="email-link"
+           data-user="r.d.jagiello"
+           data-domain="gmail.com"
+           data-tooltip="r.d.jagiello@gmail.com">✉</a>
+      </div>
+    </aside>
 
-</div>
+    <!-- Main content -->
+    <main class="content">
 
-    </div>
+      <!-- About -->
+      <section id="about">
+        <h1 class="name">Robert Jagiello</h1>
 
+        <p>
+          I am a researcher in social psychology and evolutionary anthropology interested in the motivations that guide belief formation, social learning and cultural transmission. I completed my PhD at the University of Oxford under the supervision of
+          <a href="https://www.harveywhitehouse.com/" target="_blank" rel="noopener noreferrer">Prof Harvey Whitehouse</a>,
+          based at the
+          <a href="https://www.cssc.ox.ac.uk/" target="_blank" rel="noopener noreferrer">
+            Centre for the Study of Social Cohesion (CSSC)
+          </a>.
+        </p>
+
+        <p>
+          I am equally interested in supernatural and conspiratorial belief systems, the social cognition underlying moral norms and the evolution of morality as a cooperative device.
+        </p>
+
+        <p>
+          My work integrates experimental psychology, cultural evolutionary theory and computational approaches, with earlier training in cognitive neuroscience using EEG and pupillometry.
+        </p>
+      </section>
+
+      <!-- CV -->
+      <section id="cv">
+        <h2>Curriculum Vitae</h2>
+        <p>
+          <a href="RJagiello_CV.pdf" target="_blank" rel="noopener noreferrer">
+            Download CV (PDF)
+          </a>
+        </p>
+      </section>
+
+      <!-- Research -->
+      <section id="research">
+        <h2>Research</h2>
+
+        <!-- ⬇️ KEEP ALL YOUR EXISTING .paper MARKUP HERE ⬇️ -->
+        <!-- Paste the entire contents of <div class="research-content"> … </div> here -->
+      </section>
+
+      <!-- Teaching -->
+      <section id="teaching">
+        <h2>Teaching</h2>
+        <ul>
+          <li>Course name — role, institution</li>
+          <li>Course name — role, institution</li>
+        </ul>
+      </section>
+
+      <!-- Public Impact -->
+      <section id="impact">
+        <h2>Public Impact</h2>
+        <ul>
+          <li>
+            <strong>Outlet</strong> —
+            <a href="#">Title of article</a>
+          </li>
+          <li>
+            <strong>Outlet</strong> —
+            <a href="#">Title of article</a>
+          </li>
+        </ul>
+      </section>
+
+    </main>
   </div>
 
-</section>
-
-  </div>
-
-<script>
-
-document.addEventListener('DOMContentLoaded', () => {
-    const emailLink = document.querySelector('.email-link');
-    if (emailLink) {
-      emailLink.addEventListener('click', (e) => {
+  <!-- Email obfuscation -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const link = document.querySelector('.email-link');
+      link.addEventListener('click', e => {
         e.preventDefault();
-        const user = emailLink.dataset.user;
-        const domain = emailLink.dataset.domain;
-        window.location.href = `mailto:${user}@${domain}`;
+        window.location.href =
+          `mailto:${link.dataset.user}@${link.dataset.domain}`;
       });
-    }
-  });
-  
-</script>
+    });
+  </script>
 
-
-  
 </body>
 </html>
