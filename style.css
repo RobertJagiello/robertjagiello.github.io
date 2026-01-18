@@ -150,6 +150,10 @@ h2 {
   margin-top: 0;
 }
 
+.bio p {
+  font-size: 1.1rem;
+}
+
 /* Photo + icons */
 
 .photo-block {
