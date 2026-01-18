@@ -290,12 +290,14 @@ section#research .paper {
 
 .paper-authors {
   margin: 0.2em 0;
+   margin-left: 1.2em;
 }
 
 .paper-journal {
   margin: 0.2em 0 0.6em 0;
   font-style: italic;
   color: #555;
+   margin-left: 1.2em;
 }
 
 /* =========================
@@ -306,6 +308,7 @@ section#research .paper {
   display: flex;
   gap: 0.75em;
   margin-bottom: 0.75em;
+   margin-left: 1.2em;
 }
 
 .paper-buttons button,
