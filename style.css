@@ -243,58 +243,6 @@ section p a:hover {
 }
 
 /* =========================
-   Mobile responsiveness
-   ========================= */
-
-@media (max-width: 768px) {
-
-  .container {
-    margin: 1.5em auto;
-    padding: 0 1em;
-  }
-
-  .about {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .photo-block {
-    order: 1;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-
-  .bio {
-    order: 2;
-    width: 100%;
-    text-align: left;
-  }
-
-  .about img {
-    width: 210px;
-    margin-top: 0;
-  }
-
-  .icon-links {
-    margin-top: 0.75em;
-    margin-bottom: 0;
-  }
-
-  .nav-inner {
-    padding: 0.75em 1em;
-  }
-
-  .nav a {
-    font-size: 1.05em;
-    margin-left: 1em;
-  }
-
-  section {
-    margin-top: 2em;
-  }
-}
-
-/* =========================
    Research section (FIXED)
    ========================= */
 
@@ -441,15 +389,66 @@ section#research .paper {
 }
 
 
-@media (max-width: 1200px) {
-  section#research .paper-box.open {
-    max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
+/* =========================
+   Mobile layout fixes
+   ========================= */
 
 @media (max-width: 768px) {
+
+  /* Container spacing */
+  .container {
+    margin: 1.5em auto;
+    padding: 0 1em;
+  }
+
+  /* NAV: prevent clipping */
+  .nav-inner {
+    justify-content: center;
+    padding: 0.75em 0.75em;
+  }
+
+  .nav a {
+    font-size: 1.05em;
+    margin: 0 0.6em;
+  }
+
+  /* Collapse two-column layout */
+  .page-layout {
+    display: block;
+  }
+
+  /* Sidebar becomes normal block */
+  .sidebar {
+    position: static;
+    width: 100%;
+    margin-bottom: 1.5em;
+    text-align: center;
+  }
+
+  /* Image sizing on mobile */
+  .sidebar img {
+    width: 180px;
+    margin: 0 auto;
+  }
+
+  /* Sidebar links */
+  .icon-links {
+    margin-top: 0.75em;
+    gap: 0.3em;
+    align-items: center;
+  }
+
+  /* Main content uses full width */
+  .content {
+    max-width: 100%;
+  }
+
+  /* Section spacing */
+  section {
+    margin-top: 2em;
+  }
+
+  /* Figures stack vertically */
   .figure-row {
     grid-template-columns: 1fr;
   }
@@ -458,3 +457,16 @@ section#research .paper {
     margin-top: 0.75em;
   }
 }
+
+/* =========================
+   Medium screens (tablets)
+   ========================= */
+
+@media (max-width: 1200px) {
+  section#research .paper-box.open {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
