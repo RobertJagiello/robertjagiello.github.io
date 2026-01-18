@@ -455,6 +455,8 @@ section#research .paper {
   /* Collapse two-column layout */
   .page-layout {
     display: block;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   /* Sidebar becomes normal block */
