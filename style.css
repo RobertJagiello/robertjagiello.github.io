@@ -82,8 +82,21 @@ body {
   position: sticky;
   top: 6.5em; /* below sticky nav */
   align-self: start;
-  text-align: center;
 }
+
+/* =========================
+   Sidebar image FIX
+   ========================= */
+
+.sidebar img {
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  margin: 0 auto 0.75em auto;
+}
+
 
 /* Main content column */
 
