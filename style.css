@@ -139,6 +139,30 @@ h2 {
   color: #1b4d3e;
 }
 
+section > h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+
+  font-weight: normal;
+  color: #1b4d3e;
+  line-height: 1.2;
+
+  margin-top: 2.2em;
+  margin-bottom: 1.2em;
+}
+
+section > h2::before,
+section > h2::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  min-height: 1px;
+  background-color: rgba(0, 0, 0, 0.18);
+  flex-shrink: 0;
+}
+
 /* =========================
    About section layout
    ========================= */
