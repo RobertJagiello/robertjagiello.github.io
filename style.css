@@ -10,6 +10,10 @@ body {
   background-color: #f5f6f4;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* =========================
    Sticky navigation
    ========================= */
@@ -202,6 +206,7 @@ h2 {
    ========================= */
 
 section {
+scroll-margin-top: 6.5em;
   margin-top: 3em;
 }
 
