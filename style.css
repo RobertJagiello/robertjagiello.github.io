@@ -74,7 +74,7 @@ body {
   top: 6.5em;      
   left: 1.5em;     
   width: 170px;    
-  text-align: center;
+  text-align: left;
 }
 
 .sidebar img {
@@ -94,12 +94,13 @@ body {
 
 .sidebar-subtitle {
   font-size: 0.8em;
-  color: #3a7f6a;
+  color: #666;
   margin-bottom: 0.7em;
 }
 
 .content {
-  max-width: 720px;
+  max-width: 680px;
+  padding-left: 200px; /* creates clearance from sidebar */
 }
 
 /* =========================
