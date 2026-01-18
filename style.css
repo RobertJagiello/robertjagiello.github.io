@@ -72,39 +72,38 @@ body {
   margin: 0 auto;
   padding: 0 1.25em;
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 1.8em;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 2.2em;
 }
 
 .sidebar {
-  width: 200px;
+  width: 140px;
   position: sticky;
   top: 6.5em;
   align-self: start;
+  text-align: left;
 }
 
 .sidebar img {
-  width: 200px;
-  max-width: 100%;
-  height: auto;
+  width: 110px;
+  border-radius: 50%;
   display: block;
-  margin: 0 auto 0.75em auto;
-  border-radius: 4px;
+  margin-bottom: 0.6em;
+  opacity: 0.95;
 }
 
 .sidebar-name {
-  margin-top: 0.6em;
-  font-size: 1.1em;
-  font-weight: normal;
-  color: #1b4d3e;
+  font-size: 0.95em;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.1em;
 }
 
 .sidebar-subtitle {
-  font-size: 0.85em;
+  font-size: 0.8em;
   color: #666;
-  margin-top: 0.1em;
+  margin-bottom: 0.7em;
 }
-
 
 .content {
   max-width: 720px;
@@ -173,16 +172,14 @@ h2 {
 
 .icon-links {
   display: flex;
-  justify-content: center;
-  gap: 0.75em;
-  margin-top: 0.75em;
+  flex-direction: column;
+  gap: 0.35em;
+  margin-top: 0.6em;
 }
 
 .icon-links a {
-  font-size: 1.7em;
+  font-size: 0.95em;
   color: #1b4d3e;
-  text-decoration: none;
-  position: relative;
 }
 
 .icon-links a:hover {
