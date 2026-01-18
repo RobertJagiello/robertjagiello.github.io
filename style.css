@@ -291,6 +291,7 @@ section#research h2 {
   text-align: center;
   font-weight: normal;
   color: #1b4d3e;
+  line-height: 1.2;
 }
 
 section#research h2::before,
@@ -299,6 +300,8 @@ section#research h2::after {
   flex: 1;
   height: 1px;
   background-color: rgba(0, 0, 0, 0.18); /* light grey */
+  min-height: 1px;
+  flex-shrink: 0;
 }
 
 section#research h2:first-of-type {
