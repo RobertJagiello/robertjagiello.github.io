@@ -171,35 +171,34 @@ h2 {
 
 .icon-links {
   display: flex;
-  gap: 1.2em;
-  justify-content: center;
-}
-
-.icon-link {
-  display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4em;
+  margin-top: 0.9em;
+}
+
+.icon-links a {
+  display: grid;
+  grid-template-columns: 1.6em auto; /* icon column + label column */
+  column-gap: 0.6em;
   align-items: center;
-  text-decoration: none;
+  font-size: 0.95em;
   color: #1b4d3e;
+  text-decoration: none;
 }
 
-.icon-link .icon {
-  font-size: 1.6em;
-  line-height: 1;
+.icon-links a:hover {
+  opacity: 0.8;
 }
 
-.icon-link .label {
-  margin-top: 0.3em;
-  font-size: 0.7em;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #555;
+.icon-links .icon {
+  font-size: 1.2em;
+  text-align: center;
 }
 
-.icon-link:hover {
-  opacity: 0.75;
+.icon-links .label {
+  text-align: left;
 }
-
 
 /* =========================
    Sections
