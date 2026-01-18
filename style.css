@@ -67,7 +67,7 @@ a:hover {
 
 .sidebar {
   position: sticky;
-  top: 6em; /* below nav */
+  top: 6em;
   align-self: start;
   text-align: center;
 }
@@ -79,7 +79,9 @@ a:hover {
   margin-bottom: 0.75em;
 }
 
-/* Icon links */
+/* =========================
+   Icon links
+   ========================= */
 
 .icon-links {
   display: flex;
@@ -191,9 +193,110 @@ h2 {
   color: #555;
 }
 
-/* Buttons */
+/* =========================
+   Paper buttons
+   ========================= */
 
 .paper-buttons {
   display: flex;
   gap: 0.75em;
-  margin-bott
+  margin-bottom: 0.6em;
+}
+
+.paper-buttons button,
+.paper-buttons a {
+  font-family: inherit;
+  font-size: 0.9em;
+  padding: 0.25em 0.6em;
+  border: 1px solid #ccc;
+  background: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: #1b4d3e;
+  border-radius: 3px;
+}
+
+.paper-buttons button:hover,
+.paper-buttons a:hover {
+  background-color: #eef2ef;
+}
+
+/* =========================
+   Toggle boxes (Abstract / Figures)
+   ========================= */
+
+.paper-box {
+  display: none;
+  padding: 1em;
+  margin-top: 0.6em;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  background-color: #fafafa;
+  scroll-margin-top: 7em;
+}
+
+.paper-box.open {
+  display: block;
+}
+
+/* =========================
+   Figures
+   ========================= */
+
+.figure-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1.5em;
+  align-items: start;
+}
+
+.figure-row img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  display: block;
+}
+
+.figure-caption {
+  font-size: 0.95em;
+  color: #333;
+  line-height: 1.5;
+}
+
+.figure-caption p {
+  margin-bottom: 0.8em;
+}
+
+.figure-caption p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================
+   Mobile responsiveness
+   ========================= */
+
+@media (max-width: 900px) {
+
+  .page-layout {
+    grid-template-columns: 1fr;
+    gap: 2em;
+  }
+
+  .sidebar {
+    position: relative;
+    top: auto;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .figure-row {
+    grid-template-columns: 1fr;
+  }
+
+  .figure-row img {
+    max-width: 100%;
+  }
+
+}
