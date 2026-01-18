@@ -1,5 +1,5 @@
 /* =========================
-   Global base
+   Global reset
    ========================= */
 
 body {
@@ -10,17 +10,8 @@ body {
   background-color: #f5f6f4;
 }
 
-a {
-  color: #1b4d3e;
-  text-decoration: none;
-}
-
-a:hover {
-  opacity: 0.8;
-}
-
 /* =========================
-   Sticky top navigation
+   Sticky navigation
    ========================= */
 
 .nav {
@@ -28,11 +19,17 @@ a:hover {
   top: 0;
   z-index: 1000;
   background-color: #f5f6f4;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid #e0e0e0;
 }
 
+.nav + .container {
+  padding-top: 0.5em;
+}
+
+/* Navigation */
+
 .nav-inner {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 1em 1.25em;
   display: flex;
@@ -40,8 +37,14 @@ a:hover {
 }
 
 .nav a {
-  margin-left: 1.6em;
+  margin-right: 1.5em;
+  color: #1b4d3e;
+  text-decoration: none;
   font-size: 1.25em;
+}
+
+.nav a:hover {
+  opacity: 0.8;
 }
 
 .nav a.current {
@@ -49,50 +52,87 @@ a:hover {
 }
 
 /* =========================
-   Page layout
+   Page container
    ========================= */
 
-.page-layout {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 1.25em;
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 3em;
+.container {
+  max-width: 1000px;
+  margin: 0.9em auto;
+  padding: 0 1.25em;
+  border-left: 1px solid rgba(0, 0, 0, 0.04);
+  padding-left: 1.4em;
 }
 
 /* =========================
-   Sticky sidebar
+   Name / headings
    ========================= */
 
-.sidebar {
-  position: sticky;
-  top: 6em;
-  align-self: start;
+.name {
+  text-align: center;
+  font-weight: normal;
+  color: #1b4d3e;
+  margin-top: 0.5em;
+  margin-bottom: 1.75em;
+}
+
+#index .name {
+  margin-top: 0.2em;
+}
+
+h2 {
+  margin-bottom: 0.5em;
+  font-weight: normal;
+  color: #1b4d3e;
+}
+
+/* =========================
+   About section layout
+   ========================= */
+
+.about {
+  display: flex;
+  gap: 2.5em;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.bio {
+  max-width: 720px;
+  flex: 0 1 720px;
+}
+
+.bio p:first-child {
+  margin-top: 0;
+}
+
+/* Photo + icons */
+
+.photo-block {
+  margin-top: 0.2em;
   text-align: center;
 }
 
-.sidebar img {
-  width: 200px;
+.about img {
+  width: 240px;
   max-width: 100%;
   border-radius: 4px;
-  margin-bottom: 0.75em;
+  display: block;
+  margin: 0 auto;
 }
 
-/* =========================
-   Icon links
-   ========================= */
+/* Icon links */
 
 .icon-links {
   display: flex;
   justify-content: center;
-  gap: 0.8em;
+  gap: 0.75em;
   margin-top: 0.75em;
 }
 
 .icon-links a {
   font-size: 1.7em;
   color: #1b4d3e;
+  text-decoration: none;
   position: relative;
 }
 
@@ -124,58 +164,127 @@ a:hover {
 }
 
 /* =========================
-   Main content
+   Sections
    ========================= */
 
-.content {
-  max-width: 720px;
-}
-
-/* Headings */
-
-.name {
-  text-align: left;
-  font-weight: normal;
-  color: #1b4d3e;
-  margin-top: 0;
-  margin-bottom: 1.5em;
-  letter-spacing: 0.3px;
-}
-
-h2 {
-  font-weight: normal;
-  color: #1b4d3e;
-  font-size: 1.25em;
-  margin-top: 2.5em;
-  margin-bottom: 0.6em;
-}
-
-/* Section spacing */
-
-.content section {
+section {
   margin-top: 3em;
 }
 
-.content section:first-child {
+#index section#about {
   margin-top: 0;
 }
 
-/* Text emphasis */
+/* Links */
 
-.content p a {
+a {
+  color: #1b4d3e;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.bio a,
+section p a {
   color: #3a7f6a;
 }
 
-.content p a:hover {
+.bio a:hover,
+section p a:hover {
   opacity: 0.85;
 }
 
 /* =========================
-   Research papers
+   Mobile responsiveness
    ========================= */
 
-.paper {
-  margin-top: 1.4em;
+@media (max-width: 768px) {
+
+  .container {
+    margin: 1.5em auto;
+    padding: 0 1em;
+  }
+
+  .about {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo-block {
+    order: 1;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .bio {
+    order: 2;
+    width: 100%;
+    text-align: left;
+  }
+
+  .about img {
+    width: 210px;
+    margin-top: 0;
+  }
+
+  .icon-links {
+    margin-top: 0.75em;
+    margin-bottom: 0;
+  }
+
+  .nav-inner {
+    padding: 0.75em 1em;
+  }
+
+  .nav a {
+    font-size: 1.05em;
+    margin-left: 1em;
+  }
+
+  section {
+    margin-top: 2em;
+  }
+}
+
+/* =========================
+   Research section (FIXED)
+   ========================= */
+
+/* spacing reset INSIDE research section */
+
+section#research h1,
+section#research h2,
+section#research p,
+section#research ul,
+section#research li {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Centered research column */
+
+section#research .research-content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-top: 0.5em;
+}
+
+/* Headings spacing */
+
+section#research h2 {
+  margin-top: 1.8em;
+}
+
+section#research h2:first-of-type {
+  margin-top: 1.1em;
+}
+
+/* Papers */
+
+section#research .paper {
+  margin-top: 1.2em;
 }
 
 .paper-title {
@@ -194,13 +303,13 @@ h2 {
 }
 
 /* =========================
-   Paper buttons
+   Buttons
    ========================= */
 
 .paper-buttons {
   display: flex;
   gap: 0.75em;
-  margin-bottom: 0.6em;
+  margin-bottom: 0.75em;
 }
 
 .paper-buttons button,
@@ -213,7 +322,6 @@ h2 {
   cursor: pointer;
   text-decoration: none;
   color: #1b4d3e;
-  border-radius: 3px;
 }
 
 .paper-buttons button:hover,
@@ -222,7 +330,7 @@ h2 {
 }
 
 /* =========================
-   Toggle boxes (Abstract / Figures)
+   Toggle boxes
    ========================= */
 
 .paper-box {
@@ -232,29 +340,35 @@ h2 {
   border: 1px solid #e1e1e1;
   border-radius: 4px;
   background-color: #fafafa;
-  scroll-margin-top: 7em;
+  scroll-margin-top: 6.6em;
 }
 
 .paper-box.open {
   display: block;
 }
 
-/* =========================
-   Figures
-   ========================= */
+/* Figures */
+
+.paper-box img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 0.75em auto;
+}
+
+/* Side-by-side figure + caption */
 
 .figure-row {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  gap: 1.5em;
+  gap: 1.25em;
   align-items: start;
 }
 
 .figure-row img {
-  width: 100%;
-  max-width: 480px;
+  max-width: 100%;
   height: auto;
-  display: block;
+  margin: 0;
 }
 
 .figure-caption {
@@ -263,40 +377,36 @@ h2 {
   line-height: 1.5;
 }
 
-.figure-caption p {
+section#research .figure-caption p {
   margin-bottom: 0.8em;
 }
 
-.figure-caption p:last-child {
+section#research .figure-caption p:last-child {
   margin-bottom: 0;
 }
 
-/* =========================
-   Mobile responsiveness
-   ========================= */
+/* Expanded boxes use more width */
 
-@media (max-width: 900px) {
+section#research .paper-box.open {
+  max-width: 1000px;
+  margin-left: calc(-140px);
+  margin-right: calc(-140px);
+}
 
-  .page-layout {
-    grid-template-columns: 1fr;
-    gap: 2em;
-  }
-
-  .sidebar {
-    position: relative;
-    top: auto;
-  }
-
-  .content {
+@media (max-width: 1200px) {
+  section#research .paper-box.open {
     max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
+}
 
+@media (max-width: 768px) {
   .figure-row {
     grid-template-columns: 1fr;
   }
 
-  .figure-row img {
-    max-width: 100%;
+  .figure-caption {
+    margin-top: 0.75em;
   }
-
 }
