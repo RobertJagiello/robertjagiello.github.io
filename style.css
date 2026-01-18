@@ -587,7 +587,12 @@ section#research .paper {
   section#research h2::after {
   display: none;
   }
-   
+
+  .section-divider::before,
+  .section-divider::after {
+  display: none;
+}
+
 }
 
 /* =========================
