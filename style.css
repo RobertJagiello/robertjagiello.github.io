@@ -325,6 +325,29 @@ section#research .paper {
   background-color: #eef2ef;
 }
 
+/* Media / external links use same visual language as paper buttons */
+
+.link-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-top: 0.4em;
+}
+
+.link-buttons a {
+  font-family: inherit;
+  font-size: 0.85em;
+  padding: 0.2em 0.55em;
+  border: 1px solid #ccc;
+  background: none;
+  color: #1b4d3e;
+  text-decoration: none;
+}
+
+.link-buttons a:hover {
+  background-color: #eef2ef;
+}
+
 /* =========================
    Toggle boxes
    ========================= */
@@ -388,6 +411,19 @@ section#research .paper {
 
 .figure-caption p:last-child {
   margin-bottom: 0;
+}
+
+/* Media section: tighten bullet spacing */
+#media ul {
+  margin-top: 0.5em;
+}
+
+#media li {
+  margin-bottom: 1.6em; /* space between "On neuroscience" vs "On risk" */
+}
+
+#media li p {
+  margin: 0.2em 0; /* tight spacing between links */
 }
 
 
