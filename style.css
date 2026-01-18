@@ -90,7 +90,7 @@ html {
 }
 
 .sidebar-name {
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: 500;
   color: #1b4d3e;
   margin-bottom: 0.1em;
@@ -151,7 +151,7 @@ h2 {
 }
 
 .bio p {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
 }
 
 /* Photo + icons */
@@ -177,7 +177,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.3em;
+  gap: 0.18em;
   margin-top: 0.9em;
 }
 
