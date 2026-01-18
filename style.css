@@ -485,6 +485,17 @@ section#research .paper {
   margin: 0.2em 0; /* tight spacing between links */
 }
 
+.media-topic {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.35em;
+}
+
+.teaching-role {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.4em;
+}
 
 /* =========================
    Mobile layout fixes
