@@ -63,29 +63,22 @@ body {
   padding-left: 1.4em;
 }
 
-/* =========================
-   FORCED LAYOUT RESET
-   ========================= */
-
 .page-layout {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 1.25em;
-  display: grid;
-  grid-template-columns: 140px minmax(0, 1fr);
-  gap: 2.2em;
 }
 
 .sidebar {
-  width: 140px;
-  position: sticky;
-  top: 6.5em;
-  align-self: start;
-  text-align: left;
+  position: fixed;
+  top: 6.5em;      
+  left: 1.5em;     
+  width: 170px;    
+  text-align: center;
 }
 
 .sidebar img {
-  width: 160px;
+  width: 155px;
   border-radius: 50%;
   display: block;
   margin-bottom: 0.6em;
