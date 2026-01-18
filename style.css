@@ -64,7 +64,7 @@ body {
 }
 
 /* =========================
-   Two-column page layout
+   FORCED LAYOUT RESET
    ========================= */
 
 .page-layout {
@@ -72,38 +72,28 @@ body {
   margin: 0 auto;
   padding: 0 1.25em;
   display: grid;
-  grid-template-columns: 220px 1fr; /* tighter column */
+  grid-template-columns: 220px 1fr;
   gap: 2.2em;
 }
 
-/* Left sticky column */
-
 .sidebar {
   position: sticky;
-  top: 6.5em; /* below sticky nav */
+  top: 6.5em;
   align-self: start;
 }
-
-/* =========================
-   Sidebar image FIX
-   ========================= */
 
 .sidebar img {
   width: 200px;
   max-width: 100%;
   height: auto;
-  border-radius: 4px;
   display: block;
   margin: 0 auto 0.75em auto;
+  border-radius: 4px;
 }
-
-
-/* Main content column */
 
 .content {
   max-width: 720px;
 }
-
 
 /* =========================
    Name / headings
