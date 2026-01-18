@@ -430,7 +430,7 @@ section#research .figure-caption p:last-child {
 section#research .paper-box.open {
   max-width: 100%;
   margin-left: 0;
-  margin-right: 0;
+  margin-right: calc(-200px);
 }
 
 @media (max-width: 1200px) {
