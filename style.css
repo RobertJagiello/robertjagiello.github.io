@@ -100,7 +100,7 @@ body {
 
 .content {
   max-width: 680px;
-  padding-left: 200px; /* creates clearance from sidebar */
+  padding-left: 110px; /* creates clearance from sidebar */
 }
 
 /* =========================
