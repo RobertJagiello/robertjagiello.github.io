@@ -383,6 +383,9 @@ section#research .paper {
 
 .paper-box.open {
   display: block;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: calc(-200px);
 }
 
 /* Figures */
@@ -415,21 +418,14 @@ section#research .paper {
   line-height: 1.5;
 }
 
-section#research .figure-caption p {
+.figure-caption p {
   margin-bottom: 0.8em;
 }
 
-section#research .figure-caption p:last-child {
+.figure-caption p:last-child {
   margin-bottom: 0;
 }
 
-/* Expanded boxes use more width */
-
-section#research .paper-box.open {
-  max-width: 100%;
-  margin-left: 0;
-  margin-right: calc(-400px);
-}
 
 @media (max-width: 1200px) {
   section#research .paper-box.open {
